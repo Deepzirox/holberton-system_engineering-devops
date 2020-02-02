@@ -1,2 +1,2 @@
 #!/bin/bash
-head -1 iasta
+head -3 iasta
