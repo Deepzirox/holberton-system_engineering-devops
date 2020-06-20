@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-#More if, elif and else :)
+# More if, elif and else :)
 n=1
 while [ $n -lt 21 ]
 do
