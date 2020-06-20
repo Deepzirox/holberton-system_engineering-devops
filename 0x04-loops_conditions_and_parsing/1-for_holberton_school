@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
-for i in {0..9}
+# Print loop with for
+for x in {0..9}
 do
    echo "Holberton School"
+   ((x++))
+   ((x--))
 done

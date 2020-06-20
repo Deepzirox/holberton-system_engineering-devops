@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Just a simple bash clock
 min=1
 hour=0
 

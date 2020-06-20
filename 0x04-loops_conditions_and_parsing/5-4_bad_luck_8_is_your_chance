@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Print loop with conditions and else
 n=1
 while [ $n -lt 11 ]
 do

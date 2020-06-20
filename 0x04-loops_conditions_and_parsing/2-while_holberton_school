@@ -3,6 +3,6 @@
 x=0
 while [ $x -le 9 ]
 do
-  echo "Holberton school"
+  echo "Holberton School"
   ((x++))
 done

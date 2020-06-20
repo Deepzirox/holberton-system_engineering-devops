@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
+# print loop with until
 counter=0
-
 until [ $counter -gt 9 ]
 do
   echo "Holberton School"

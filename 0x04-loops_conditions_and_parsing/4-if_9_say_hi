@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# Loops and conditions
 x=1
 
 while [ $x -lt 11 ]
