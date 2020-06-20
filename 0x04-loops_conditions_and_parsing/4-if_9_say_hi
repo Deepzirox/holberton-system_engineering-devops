@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 # Loops and conditions
-x=1
+x=0
 
 while [ $x -lt 11 ]
 do
