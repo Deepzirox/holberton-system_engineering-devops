@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+x=0
+while [ $x -le 9 ]
+do
+  echo "Holberton school"
+  x=$(( $x + 1 ))
+done
