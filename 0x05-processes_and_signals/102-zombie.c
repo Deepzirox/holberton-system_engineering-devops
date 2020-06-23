@@ -6,10 +6,13 @@
  * starway - infinite loop
  * Return: none
  */
-void starway(void)
+int starway(void)
 {
 	while (1)
-		;
+	{
+		sleep(1);
+	}
+	return (0);
 }
 /**
  * main - entry point
@@ -27,6 +30,6 @@ int main(void)
 			return (0);
 		printf("Zombie process created, PID: %d\n", child);
 	}
-	starway();
-	return (0);
+
+	return (starway());
 }
