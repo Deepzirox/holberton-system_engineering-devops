@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# list with for
+for x in ${ls}
+do
+    echo $x
+done
