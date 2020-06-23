@@ -19,7 +19,7 @@ int main(void)
 {
 	int i;
 	pid_t child;
-	
+
 	for (i = 0; i < 5; i++)
 	{
 		child = fork();
