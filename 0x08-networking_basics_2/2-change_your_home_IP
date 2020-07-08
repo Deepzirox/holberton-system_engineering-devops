@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# Change ip redirection of localhost and facebook.com
+cat /etc/hosts > tmp.txt
+sed -i '1i\127.0.0.2    localhost' tmp.txt
+echo "8.8.8.8           facebook.com" >> tmp.txt
+cat tmp.txt > /etc/hosts
