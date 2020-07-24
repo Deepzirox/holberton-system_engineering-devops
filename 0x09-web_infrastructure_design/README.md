@@ -3,7 +3,7 @@
 <h3>0-SIMPLE_WEB_STACK </h3>
 
 The most simples web infraestrucure using the LAMP STACK
-
+ 
 1 server
 1 web server (Nginx)
 1 application server
