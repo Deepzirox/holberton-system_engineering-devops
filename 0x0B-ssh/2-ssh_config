@@ -1,0 +1,5 @@
+# My configuration file
+
+host 35.229.27.123
+   PasswordAuthentication no
+   IdentityFile ~/.ssh/holberton
