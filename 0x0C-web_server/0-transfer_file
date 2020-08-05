@@ -1,4 +1,5 @@
 #!/usr/bin/env bash
+# transfer file to server
 if [ $# -eq 4 ]
 then
    scp -i $4 $1 $3@$2:~/
