@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
-# Configure Nginx server
-sudo apt -y update
-sudo apt -y nginx-full
+#configure Nginx server
+mkdir -p /var/www/html/
+apt -y update
+apt -y install nginx-full
 echo "Holberton School for the win!" > /var/www/html/index.html
-sudo systemctl restart nginx
+service nginx restart
