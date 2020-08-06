@@ -1,5 +1,6 @@
 #!/usr/bin/env bash
 # the fix is create and restar apache server
+apt -y update
 apt -y apache2
 echo "Hello Holberton" | tee /var/www/html/index.html
 sudo service apache2 restart
