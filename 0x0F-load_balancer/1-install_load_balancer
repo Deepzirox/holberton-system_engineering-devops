@@ -4,5 +4,5 @@ sudo apt-get -y update
 sudo apt-get install -y haproxy=1.6.\*
 front="frontend http\n\tbind *:80\n\tmode http\n\tdefault_backend holbi_servers"
 back="backend holbi_servers\n\tbalance roundrobin\n\tmode http\n\tserver 1611-web-01 35.229.27.123:80\n\tserver 1611-web-02 104.196.159.249:80"
-sudo sed -i "50i \\\n$front\n\n$back\n" /etc/haproxy/haproxy.cfg
+sudo sed -i "35i \\\n\n\n\n$front\n\n$back\n" /etc/haproxy/haproxy.cfg
 sudo service haproxy restart
