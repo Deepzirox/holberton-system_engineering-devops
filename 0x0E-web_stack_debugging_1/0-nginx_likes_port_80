@@ -2,4 +2,5 @@
 # Serve nginx to port 80
 sudo apt install -y update
 sudo apt install -y nginx
+sudo ufw allow "Nginx HTTP"
 sudo service nginx restart
