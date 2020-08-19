@@ -2,14 +2,14 @@
 # GET A RECORD FROM DOMAINS
 get_record () {
 	ADDRESS=$(dig "$1.$2" +short)
-	echo $1 $ADDRESS | awk '{printf "The subdomain %s is a A record and points to %s\n", $1, $2}'
+	echo "$1" "$ADDRESS" | awk '{printf "The subdomain %s is a A record and points to %s\n", $1, $2}'
 }
 
 if [ $# -eq 1 ]; then
-	get_record "www" $1
-	get_record "web-01" $1
-	get_record "web-02" $1
-	get_record "lb-01" $1
+	get_record "www" "$1"
+	get_record "web-01" "$1"
+	get_record "web-02" "$1"
+	get_record "lb-01" "$1"
 elif [ $# -eq 2 ]; then
-	get_record $2 $1
+	get_record "$2" "$1"
 fi
