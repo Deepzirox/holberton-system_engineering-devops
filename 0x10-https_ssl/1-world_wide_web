@@ -7,9 +7,9 @@ get_record () {
 
 if [ $# -eq 1 ]; then
 	get_record "www" "$1"
+	get_record "lb-01" "$1"
 	get_record "web-01" "$1"
 	get_record "web-02" "$1"
-	get_record "lb-01" "$1"
 elif [ $# -eq 2 ]; then
 	get_record "$2" "$1"
 fi
