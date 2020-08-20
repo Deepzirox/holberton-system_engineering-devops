@@ -47,6 +47,7 @@ frontend www
         default_backend http_web
 
 backend http_web
+		redirect scheme https code 301 if !{ ssl_fc }
         balance roundrobin
         server web-01 35.229.27.123
         server web-02 104.196.159.249
