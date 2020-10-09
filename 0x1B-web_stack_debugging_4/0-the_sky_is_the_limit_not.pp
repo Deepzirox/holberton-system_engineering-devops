@@ -1,5 +1,4 @@
-
-# debugging task
+# web stack debugging task
 
 exec { 'change ulimit':
     path    => '/bin',
@@ -7,7 +6,7 @@ exec { 'change ulimit':
 }
 
 
-exec { 'nginx restart':
+exec { 'nging restart':
     path    => '/etc/init.d',
     command => 'nginx restart'
 }
