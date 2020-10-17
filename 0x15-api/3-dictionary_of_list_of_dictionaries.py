@@ -1,31 +1,32 @@
 #!/usr/bin/python3
 """
-Export data
+export json
 """
-from sys import argv
 import json
 import requests
 
 
 if __name__ == "__main__":
-    """ export data
+    """ obtain user and task
     """
     url = 'https://jsonplaceholder.typicode.com'
-    user_id = argv[1]
-    filename = user_id + ".json"
-    value1 = requests.get(url + '/todos')
-    value2 = requests.get(url + '/users/{}'.format(user_id))
-    username = value2.json()['username']
+    filename = 'todo_all_employees.json'
 
-    with open(filename, 'w', newline='') as csvfile:
-        a_dict = {}
+    value1 = requests.get(url + '/todos')
+    value2 = requests.get(url + '/users')
+    a_dict = {}
+
+    for user in value2.json():
+        username = user.get('username')
         a_list = []
         for todo_dict in value1.json():
-            if todo_dict.get('userId') == int(user_id):
+            if todo_dict.get('userId') == user.get('id'):
                 task_dict = {}
                 task_dict['task'] = todo_dict.get('title')
                 task_dict.update({'username': username})
                 task_dict['completed'] = todo_dict.get('completed')
                 a_list.append(task_dict)
-        a_dict['{}'.format(user_id)] = a_list
-        json.dump(a_dict, csvfile)
+        a_dict['{}'.format(user.get('id'))] = a_list
+
+    with open(filename, 'w', newline='') as jsonfile:
+        json.dump(a_dict, jsonfile)
